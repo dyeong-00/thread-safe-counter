@@ -4,7 +4,7 @@
 
 ## 2. Compare performance (mutex vs semaphore)
 * ### mutex
-<img width="80%" src="https://user-images.githubusercontent.com/79148947/121793376-63882100-cc39-11eb-99f0-72fe6e4a5758.png"/>
+<img width="80%" src="https://user-images.githubusercontent.com/79148947/121793553-30469180-cc3b-11eb-9bae-9166083e8e16.png"/>
 
 * ### semaphore
-<img width="80%" src="https://user-images.githubusercontent.com/79148947/121793450-0771cc80-cc3a-11eb-95a4-e6ed2ac6f949.png"/>
+<img width="80%" src="https://user-images.githubusercontent.com/79148947/121793554-32105500-cc3b-11eb-9826-3d0f9a54d3f4.png"/>
