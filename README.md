@@ -12,6 +12,8 @@
 ## 3. analysis
 Mutex is much faster than Semaphore.
 
-This is because of the functions(lock_sem, unlock_sem) that execute the semaphore. These functions increase the overhead.
+This is because of the busy waiting. In busy waiting process keeps checking some condition continuously. It wastes CPU time.
+
+Or because of the functions(lock_sem, unlock_sem) that execute the semaphore. These functions increase the overhead.
 
 Binary semaphore is too complex to do simple things. Therefore, it is recommended to use mutex instead of binary semaphore.
