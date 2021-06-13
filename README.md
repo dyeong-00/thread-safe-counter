@@ -10,5 +10,5 @@
 <img width="80%" src="https://user-images.githubusercontent.com/79148947/121793554-32105500-cc3b-11eb-9826-3d0f9a54d3f4.png"/>
 
 ## 3. analysis
-mutex is much faster than semaphore
+mutex is much faster than semaphore.
 This is because of the code that executes the semaphore.
