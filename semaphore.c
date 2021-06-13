@@ -13,7 +13,7 @@ union semun {
     ushort *array;
 };
 
-#define PATH "/home/sun/catkin_ws/src/thread-safe-counter"
+#define PATH "/home/sun"
 
 
 
@@ -33,7 +33,11 @@ void lock_sem(counter_t *c){
   s.sem_num = 0;
   s.sem_op = -1;
   s.sem_flg = 0;
-  semop(c->semid, &s, 1);
+  if (semop(c->semid, &s, 1)<0)
+  {
+	  fprintf(stderr, "semop failed\n");
+  }
+  
 }
 
 void unlock_sem(counter_t *c){
@@ -41,7 +45,7 @@ void unlock_sem(counter_t *c){
   s.sem_num = 0;
   s.sem_op = 1;
   s.sem_flg = 0;
-  semop(c->semid, &s, 1);
+  if (semop(c->semid, &s, 1)<0)                                                                {                                                                                                    fprintf(stderr, "semop failed\n");                                                   } 
 }
 
 void init(counter_t *c, char *argv[]) {
@@ -60,7 +64,10 @@ void init(counter_t *c, char *argv[]) {
     printf("semid = %d\n", c->semid);
 
     c->arg.val = 1;
-    semctl(c->semid, 0, SETVAL, c->arg);
+    if (semctl(c->semid, 0, SETVAL, c->arg)<0)
+    {
+	    fprintf(stderr, "semctl failed\n");
+    }
 
 }
 

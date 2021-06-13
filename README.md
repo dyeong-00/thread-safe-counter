@@ -11,4 +11,4 @@
 
 ## 3. analysis
 mutex is much faster than semaphore
-
+This is because of the code that executes the semaphore.
