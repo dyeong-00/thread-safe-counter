@@ -11,4 +11,4 @@
 
 ## 3. analysis
 mutex is much faster than semaphore.
-This is because of the code that executes the semaphore.
+This is because of the functions(lock_sem, unlock_sem) that executes the semaphore. These increase the overhead.
